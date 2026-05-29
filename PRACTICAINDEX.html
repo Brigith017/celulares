@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iStore - Tienda de iPhones</title>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f7; color: #1d1d1F; margin: 0; line-height: 1.6;">
+  
+<header style="background: #000; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center;">
+    <h1 style="margin: 0; font-size: 26px;">iStore</h1>
+    <nav>
+<a href="index.html">
+<a href="#INICIO" style="color: white; margin: 0 15px; text-decoration: none;">INICIO</a>
+     <a href="#ESLOGAN" style="color: white; margin: 0 15px; text-decoration: none;">ESLOGAN</a>
+    </nav>
+  </header>
+
+ <header style="background: #000; color: white; padding: 20px; text-align: center;">
+    <h1 style="margin: 0; font-size: 36px;">El hogar del iphone</h1>
+    <p style="margin: 5px 0 0; color: #a1a1a6;">Tu tienda oficial de iPhones</p>
+  </header>
+  <section style="text-align: center; padding: 60px 20px; background: linear-gradient(180deg, #000, #1d1d1f); color: white;">
+    <h2 style="font-size: 42px; margin: 0;">Descubre el iPhone perfecto para ti</h2>
+    <p style="color: #a1a1a6; max-width: 600px; margin: 20px auto;">Explora toda la línea de iPhones disponibles, con sus especificaciones completas y precios.</p>
+  </section>
+
+   
+<header>
+    <div class="logo">IPHONES</div>
+
+    <!-- AQUÍ JUNTAMOS BUSCADOR Y CARRITO -->
+    <div style="display: flex; align-items: center; gap: 10px; margin-left: auto;">
+        
+        <!-- TU CÓDIGO DEL BUSCADOR, IGUALITO -->
+        <input type="text" id="buscador" placeholder="Buscar modelo..." class="search-bar" onkeyup="buscar()">
+        
+        <!-- EL CARRITO NUEVO -->
+      <div style="display: flex; align-items: center; cursor: pointer;" onclick="abrirCarrito()">
+    <span style="font-size: 22px;">🛒</span>
+    <span id="contador" style="background: limegreen; color: black; padding: 2px 7px; border-radius: 50%; font-weight: bold; font-size: 14px; margin-left: -8px;">0</span>
+</div>
+<!-- VENTANA FLOTANTE DEL CARRITO -->
+<div id="ventanaCarrito" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; border: 2px solid limegreen; padding: 20px; border-radius: 10px; width: 300px; z-index: 1000; color: white;">
+    <h2 style="color: limegreen; text-align: center;">TU CARRITO</h2>
+    <div id="listaCarrito"></div>
+    <hr style="border-color: limegreen;">
+    <h3 style="text-align: right; color: limegreen;">Total: $<span id="total">0</span> USD</h3>
+    <button onclick="cerrarCarrito()" style="background: limegreen; color: black; padding: 8px 15px; border: none; border-radius: 5px; font-weight: bold; width: 100%; margin-top: 10px;">CERRAR</button>
+</div>
+
+<!-- FONDO OSCURO CUANDO SE ABRE -->
+<div id="fondoOscuro" onclick="cerrarCarrito()" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 999;"></div>
+
+    </div>
+</header>
+
+   
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-17e.jpeg" alt="iPhone 17e" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 17e</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> 6.3 ProMotion 120hz" ProMotion 120Hz</li>
+          <li><b>Chip:</b> A19 Pro (3nm)</li>
+          <li><b>Cámara:</b> Dual 48MP + Teleobjetivo 3x</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB</li>
+          <li><b>Batería:</b> Hasta 30h de video</li>
+          <li><b>Material:</b> Aluminio de grado aeroespacial</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+    </article>
+ </div>
+    </article>
+
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="iphone-17-pro-finish-select-2025-68ffb5eeb2b1e.avif" alt="iPhone 17 pro max" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 17 pro max </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.9"ProMation 120Hz,brillo máximo 3000 nits</li>
+          <li><b>Chip:</b> A19 Pro (3nm) con cámara de vapor para mejor refrigeración</li>
+          <li><b>Cámara:</b> Sistema Pro Fusion de tres lentes de 48MP cada uno(principal + ultra gran regular + teleobjeto 4x,con opción de zoom óptica hasta 8x)</li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB / 2TB</li>
+          <li><b>Batería:</b> Hasta 32h de video</li>
+          <li><b>Material:</b> Cuerpo unibody de aluminio de grado aeroespacial con Ceramic shield 2</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+ </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-17-pro-silver-0-ff193ae.jpg"  alt="iPhone 17 pro" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 17 pro </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.3"ProMation 120Hz,brillo máximo 3000 nits</li>
+          <li><b>Chip:</b> A19 Pro (3nm) con cámara de vapor para mejor refrigeración</li>
+          <li><b>Cámara:</b> Sistema Pro Fusion de tres lentes de 48MP cada uno(principal + ultra gran regular + teleobjeto 4x,con opción de zoom óptica hasta 8x)</li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB / 2TB</li>
+          <li><b>Batería:</b> Hasta 29h de video</li>
+          <li><b>Material:</b> Cuerpo unibody de aluminio de grado aeroespacial con Ceramic shield 2</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="iPhone-Air-skyBlue-656x370-2x.jpg" alt="iPhone Air" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone Air </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.5"ProMation 120Hz,brillo máximo 2800 nits</li>
+          <li><b>Chip:</b> A19 Pro (3nm)</li>
+          <li><b>Cámara:</b> Sistema Fusion de 48MP + teleobjeto 2x de calidad óptica, zoom digital hasta 10x </li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB </li>
+          <li><b>Batería:</b> Hasta 27h de video</li>
+          <li><b>Material:</b> Diseño ultra fino de 5,6mm con titanioligero y ceramic shield 2</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "Iphone -17.png" alt="iPhone 17" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 17 </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.3"ProMation 120Hz,brillo máximo 3000 nits</li>
+          <li><b>Chip:</b> A19 Pro (3nm)</li>
+          <li><b>Cámara:</b> Sistema Dual Fusion de 48MP(principal +ultra gran regular),con zoom óptica de calidad 2x y zoom digital hasta 10x </li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB </li>
+          <li><b>Batería:</b> Hasta 26h de video</li>
+          <li><b>Material:</b> Aluminio con Ceramic shield</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iPhone-16e-main-image.webp" alt="iPhone 16e" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 16e </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED 6.1",resolución 2532 * 1170 pixeles, 460 PPI,compatible con HDR10 y Dolby Vision</li>
+          <li><b>Chip:</b> A18(3nm) con GPU de 4 núcleos,diseñado para Apple Inteligennce</li>
+          <li><b>Cámara:</b> Sistema Fusion de 48MP(apertura f/1.6,estabilización óptica)+ cámara frontal TrueDepth de 12MP (aperturaf/1.9) </li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB </li>
+          <li><b>Batería:</b> Hasta 12h de video</li>
+          <li><b>Material:</b> Aluminio con Ceramic shield</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-16-pro-max.jpg" alt="iPhone 16 pro max" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 16 pro max </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.9" ProMotion 120Hz,brillo máximo 2000 nits</li>
+          <li><b>Chip:</b> A18(3nm) con GPU de 6 núcleos</li>
+          <li><b>Cámara:</b> Sistema triple de 48MP(principal + ultra gran angular + teleobjetivo 5x)zoom óptica hasta 10x </li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB / 2TB </li>
+          <li><b>Batería:</b> Hasta 31h de video</li>
+          <li><b>Material:</b> Titanio con Ceramic shield</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-16-pro.jpeg" alt="iPhone 16 pro" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 16 pro </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED LTPO 6.3" ProMotion 120Hz,brillo máximo 2000 nits</li>
+          <li><b>Chip:</b> A18(3nm) con GPU de 6 núcleos</li>
+          <li><b>Cámara:</b> Sistema triple de 48MP(principal + ultra gran angular + teleobjetivo 5x)zoom óptica hasta 10x </li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB / 2TB </li>
+          <li><b>Batería:</b> Hasta 29h de video</li>
+          <li><b>Material:</b> Titanio con Ceramic shield</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+</article>
+      </div>
+    </article>
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-16-plus.png" alt="iPhone 16 plus" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 16 plus </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED 6.7" ProMotion 120Hz,brillo máximo 2000 nits</li>
+          <li><b>Chip:</b> A18(3nm) con GPU de 6 núcleos</li>
+          <li><b>Cámara:</b> Sistema Dual Fusion de 48MP(principal + ultra gran angular),zoom óptica 2x ,zoom digital hasta 10x </li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB </li>
+          <li><b>Batería:</b> Hasta 30h de video</li>
+          <li><b>Material:</b> Aluminio con Ceramic shield</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= "iphone-16.png" alt="iPhone 16" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 16</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED 6.1" ProMotion 120Hz,brillo máximo 2000 nits</li>
+          <li><b>Chip:</b> A18(3nm) </li>
+          <li><b>Cámara:</b> Sistema Dual Fusion de 48MP(principal + ultra gran angular),zoom óptica 2x ,zoom digital hasta 10x </li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB </li>
+          <li><b>Batería:</b> Hasta 27h de video</li>
+          <li><b>Material:</b> Aluminio con Ceramic shield</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+
+
+
+    <article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="75101-Apple-iPhone-15-Pro-HK-128GB-Black-Titanium-1024x576.jpg" alt="iPhone 15 Pro Max" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 15 Pro Max</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">El más potente de la línea Pro</p>
+        <ul style="padding-left: 20px; color: #1d1d1f;">
+          <li><b>Pantalla:</b> Super Retina XDR 6.7" ProMotion 120Hz</li>
+          <li><b>Chip:</b> A17 Pro (3nm)</li>
+          <li><b>Cámara:</b> Triple 48MP + Teleobjetivo 5x</li>
+          <li><b>Almacenamiento:</b> 256GB / 512GB / 1TB</li>
+          <li><b>Batería:</b> Hasta 29h de video</li>
+          <li><b>Material:</b> Titanio</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+
+    <article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-bluetitanium?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692923778161" alt="iPhone 15 Pro" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 15 Pro</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Potencia profesional en tamaño compacto</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR 6.1" ProMotion 120Hz</li>
+          <li><b>Chip:</b> A17 Pro</li>
+          <li><b>Cámara:</b> Triple 48MP + Teleobjetivo 3x</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB / 1TB</li>
+          <li><b>Batería:</b> Hasta 23h de video</li>
+          <li><b>Material:</b> Titanio</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+
+
+    <article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-6-1inch-pink?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1692895395658" alt="iPhone 15" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 15</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Diseño renovado con Dynamic Island</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR 6.1"</li>
+          <li><b>Chip:</b> A16 Bionic</li>
+          <li><b>Cámara:</b> Dual 48MP + Ultra gran angular</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB</li>
+          <li><b>Batería:</b> Hasta 20h de video</li>
+          <li><b>Conector:</b> USB-C</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+      </div>
+    </article>
+
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="iphone-14- pro- max.jpg" alt="iPhone 14 pro max" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 14 pro max</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Equilibrio perfecto entre precio y rendimiento</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED 6.7",resolución 2796*1290 pixeles, 460 PPI,máximo 2000 nits(exterior)</li>
+          <li><b>Chip:</b> A16 Bionic (4nm) con CPU de 6 núcleos y GPU de 5 núcleos</li>
+          <li><b>Cámara:</b> Sistema pro de 48MP(principal) + 12MP ultra gran regular + 12MP teleobjetivo 3x,rango de zoom óptico 6x,zoom digital hasta 15x</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB / 1TB</li>
+          <li><b>Batería:</b> Hasta 29h de video</li>
+          <li><b>Material:</b> Acero inoxidable con ceremic shield y parte trasera de vidrio mate</li>
+        </ul>
+       <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+
+
+
+    <article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-14-finish-select-202209-6-1inch-blue?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1660753625086" alt="iPhone 14" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 14</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Equilibrio perfecto entre precio y rendimiento</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR 6.1"</li>
+          <li><b>Chip:</b> A15 Bionic</li>
+          <li><b>Cámara:</b> Dual 12MP + Ultra gran angular</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB</li>
+          <li><b>Batería:</b> Hasta 20h de video</li>
+          <li><b>Conector:</b> Lightning</li>
+        </ul>
+<p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+            </article>
+
+      </div>
+    </article>
+
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="iphone-13-pro-max.jpg" alt="iPhone 13 pro max" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 13 pro max</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Excelente opción de entrada a la familia iPhone</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR OLED 6.7"</li>
+          <li><b>Chip:</b> A15 Bionic (5nm)</li>
+          <li><b>Cámara:</b> Sistema Pro de 12MP</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB / 1TB</li>
+          <li><b>Batería:</b> Hasta 28h de video</li>
+          <li><b>Material:</b> Acero inoxidable con ceramic shield</li>
+        </ul>
+        <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+<article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src= alt="iPhone 13 pro" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 13 pro </h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Excelente opción de entrada a la familia iPhone</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> LCD de 3.5", resolución 320 * 480 pixeles,163 PPI</li>
+          <li><b>Chip:</b> (CPU ARM cortex-A8 a 600 MHz)</li>
+          <li><b>Cámara:</b> Trasera de 3 MP con grabación de video VGA a 30 fps,enfoque táctil y georreferencia</li>
+          <li><b>Almacenamiento:</b> 8GB / 256GB / 16GB / 32GB</li>
+          <li><b>Batería:</b> Hasta 10h de video</li>
+          <li><b>Material:</b> Carcasa de plástico y vidrio, parte trasera con acabado brillante </li>
+        </ul>
+       <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+
+    </article>
+      </div>
+    </article>
+
+
+
+    <article style="background: white; border-radius: 18px; padding: 30px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+      <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-13-finish-select-202207-midnight?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=1657917153461" alt="iPhone 13" style="width: 280px; max-width: 100%; border-radius: 12px;">
+      <div style="flex: 1; min-width: 260px;">
+        <h3 style="font-size: 28px; margin: 0;">iPhone 13</h3>
+        <p style="color: #6e6e73; margin: 5px 0 15px;">Excelente opción de entrada a la familia iPhone</p>
+        <ul style="padding-left: 20px;">
+          <li><b>Pantalla:</b> Super Retina XDR 6.1"</li>
+          <li><b>Chip:</b> A15 Bionic</li>
+          <li><b>Cámara:</b> Dual 12MP</li>
+          <li><b>Almacenamiento:</b> 128GB / 256GB / 512GB</li>
+          <li><b>Batería:</b> Hasta 19h de video</li>
+          <li><b>Conector:</b> Lightning</li>
+        </ul>
+         <p style="font-size: 24px; font-weight: bold; color: #0071e3;">Desde $899 USD</p>
+<button class="agregar" onclick="agregarAlCarrito('NINJA H2', 35000)">Agregar</button>
+             </div></header>
+    <main>
+        <section class="productos" id="lista-productos">gg
+   </article>
+
+
+      </div>
+    </article>
+
+  </main>
+
+<script>
+        function buscar() {
+            let input = document.getElementById('buscador').value.toUpperCase();
+            let productos = document.getElementsByClassName('producto');
+
+            for (let i = 0; i < productos.length; i++) {
+                let nombre = productos[i].getElementsByTagName('h3')[0];
+                if (nombre) {
+                    let texto = nombre.textContent || nombre.innerText;
+                    if (texto.toUpperCase().indexOf(input) > -1) {
+                        productos[i].style.display = "";
+                    } else {
+                        productos[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+<body>
+<script>
+let contador = 0;
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+    contador++;
+    document.getElementById("contador").textContent = contador;
+    carrito.push({nombre, precio});
+    alert("✅ " + nombre + " agregado al carrito!");
+}
+
+// 👇 ESTAS SON LAS FUNCIONES NUEVAS QUE AGREGAS
+function abrirCarrito() {
+    document.getElementById("ventanaCarrito").style.display = "block";
+    document.getElementById("fondoOscuro").style.display = "block";
+    mostrarCarrito();
+}
+
+function cerrarCarrito() {
+    document.getElementById("ventanaCarrito").style.display = "none";
+    document.getElementById("fondoOscuro").style.display = "none";
+}
+
+function mostrarCarrito() {
+    let lista = document.getElementById("listaCarrito");
+    let total = 0;
+    lista.innerHTML = "";
+    
+    carrito.forEach(producto => {
+        lista.innerHTML += `<p>${producto.nombre} - $${producto.precio} USD</p>`;
+        total += producto.precio;
+    });
+    
+    document.getElementById("total").textContent = total;
+}
+</script>
+
+<section style="background: #1d1d1f; color: white; text-align: center; padding: 50px 20px;">
+<main id="BUSCADOR" style="max-width: 1200px; margin: 0 auto; padding: 60px 20px;">
+
+    
+ </body>
+</html>
